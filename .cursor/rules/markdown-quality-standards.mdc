@@ -1,0 +1,17 @@
+---
+alwaysApply: true
+---
+
+# Markdown Quality Standards
+
+All markdown documents must comply with all markdown good practices.
+
+Confirm markdown quality with the extension davidanson.vscode-markdownlint which
+is recommended for this project and lints markdown files.
+
+Ensure all markdown documents don't have lint warnings or errors.
+
+Follow proper markdown formatting, heading hierarchy, link formatting, and code
+block syntax.
+
+---

@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "sndst00m.markdown-github-dark-pack",
+        "vivaxy.vscode-conventional-commits",
+        "mikestead.dotenv",
+        "codezombiech.gitignore",
+        "bierner.markdown-preview-github-styles",
+        "davidanson.vscode-markdownlint",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "redhat.vscode-yaml",
+    ]
+}

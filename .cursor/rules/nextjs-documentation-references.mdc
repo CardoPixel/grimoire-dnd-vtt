@@ -1,0 +1,18 @@
+---
+alwaysApply: true
+---
+# Next.js Documentation References
+
+## Official Next.js Documentation References
+
+- [App Router Documentation](https://nextjs.org/docs/app)
+- [Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components)
+- [Client Components](https://nextjs.org/docs/app/building-your-application/rendering/client-components)
+- [Data Fetching](https://nextjs.org/docs/app/building-your-application/data-fetching)
+- [Routing](https://nextjs.org/docs/app/building-your-application/routing)
+- [API Routes](https://nextjs.org/docs/app/building-your-application/routing/route-handlers)
+- [Middleware](https://nextjs.org/docs/app/building-your-application/routing/middleware)
+- [Performance](https://nextjs.org/docs/app/building-your-application/optimizing)
+- [Deployment](https://nextjs.org/docs/app/building-your-application/deploying)
+
+------

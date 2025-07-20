@@ -1,0 +1,15 @@
+---
+alwaysApply: true
+---
+# Document Features
+
+Every time that Cursor Agent implements a feature (after confirming with the
+user that the feature is complete and without bugs), create a markdown file in
+the `/docs/` directory explaining how to use the feature (in Simple English).
+
+Also update the `README.md` file to reflect the new feature.
+
+Bump the package version in all the relevant files (e.g., `package.json`,
+`bun.lock`, etc.).
+
+---

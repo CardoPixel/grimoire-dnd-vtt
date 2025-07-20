@@ -1,0 +1,27 @@
+---
+alwaysApply: true
+name: Development Workflow
+---
+# Development Workflow
+
+## Git Hooks
+
+Use pre-commit hooks for linting and formatting.
+
+## ESLint/Prettier
+
+Maintain consistent code style across the project.
+
+## Commit Messages
+
+Use conventional commit messages (feat:, fix:, docs:, etc.) and gitmoji.
+
+## Branch Strategy
+
+Follow Git Flow or similar branching strategy.
+
+## Code Review
+
+Implement thorough code review process.
+
+---

@@ -1,0 +1,41 @@
+---
+alwaysApply: true
+---
+
+# Quality Standards
+
+## TypeScript
+
+Use strict TypeScript configuration with proper type definitions.
+
+## Component Structure
+
+Follow consistent component structure with props interface, component
+definition, and export.
+
+## Error Handling
+
+Implement proper error boundaries and error handling throughout the application.
+
+## Performance
+
+Optimize for Core Web Vitals (LCP, FID, CLS) and use React.memo() when
+appropriate.
+
+## Accessibility
+
+Follow WCAG guidelines and use semantic HTML elements.
+
+## Testing
+
+Write unit tests for utilities and integration tests for components.
+
+## Code Comments
+
+Add JSDoc comments for complex functions and components.
+
+## Naming Conventions
+
+Use descriptive, consistent naming for files, components, and functions.
+
+---

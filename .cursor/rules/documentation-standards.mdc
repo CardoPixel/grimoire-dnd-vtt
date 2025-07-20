@@ -1,0 +1,22 @@
+---
+alwaysApply: true
+---
+# Documentation Standards
+
+## API Documentation
+
+Document all API endpoints with using markdown files.
+
+## Component Documentation
+
+Create a markdonw document similar to Storybook for component documentation.
+
+## Architecture Documentation
+
+Maintain architecture decision records (ADRs) in the `/docs/` folder as markdown files.
+
+## Setup Instructions
+
+Keep `README.md` updated with setup and deployment instructions.
+
+---

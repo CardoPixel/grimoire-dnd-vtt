@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	min-height: 100%;
+	font-family:
+		"Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "sans-serif";
+	background-color: #18181b;
+	color: #f4f4f5;
+	margin: 0;
+	padding: 0;
+}

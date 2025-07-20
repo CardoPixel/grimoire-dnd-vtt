@@ -1,0 +1,46 @@
+---
+alwaysApply: true
+---
+
+# Software Engineering Principles
+
+## DRY (Dont Repeat Yourself)
+
+Extract common logic into reusable functions, components, and utilities.
+
+## SOLID Principles
+
+### Single Responsibility
+
+Each component/function should have one reason to change.
+
+### Open/Closed
+
+Components should be open for extension but closed for modification.
+
+### Liskov Substitution
+
+Derived components should be substitutable for their base components.
+
+### Interface Segregation
+
+Create specific interfaces rather than general-purpose ones.
+
+### Dependency Inversion
+
+Depend on abstractions, not concrete implementations.
+
+## KISS (Keep It Simple, Stupid)
+
+Prefer simple, readable solutions over complex ones.
+
+## YAGNI (You ArentGonna Need It)
+
+Don't implement features until they're actually needed.
+
+## Law of Demeter (LoD)
+
+Minimize coupling between components; components should only know about their
+immediate dependencies.
+
+---

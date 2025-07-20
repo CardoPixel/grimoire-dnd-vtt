@@ -1,0 +1,114 @@
+---
+alwaysApply: true
+---
+# Next.js Best Practices
+
+## Input Validation
+
+* Validate all user inputs on both client and server side.
+* Implement client-side form validation (e.g., with React Hook Form) in client components that interact with server actions.
+
+## Authentication and Authorization
+
+* Implement proper authentication with NextAuth.js or similar.
+* Implement middleware for authentication, route protection, and role-based access.
+* Do not perform authentication checks directly within server actions; instead, implement a robust authentication layer or data access layer.
+
+## CSRF Protection
+
+* Implement CSRF protection for forms and API routes.
+
+## Environment Variables
+
+* Never expose sensitive data in client-side code.
+* Use proper environment variable naming with `NEXT_PUBLIC_` prefix for client-side variables.
+
+## HTTPS
+
+* Always use HTTPS in production.
+
+## Performance Optimization and Asset Management
+
+* Use `@next/bundle-analyzer` to analyze bundle size.
+* Implement dynamic imports for route-based code splitting and lazy loading.
+* Use Next.js Image component for optimized images with proper sizing.
+* Use Next.js font optimization with `next/font`.
+
+## Data Fetching, Caching, and Data Access Layer (DAL)
+
+* Implement proper caching strategies for static and dynamic content.
+* Fetch data using GET requests in React Server Components for proper caching and parallel loading.
+* Utilize the React `cache` function to memoize the return value of data fetching or computation functions during a React render pass, preventing redundant calls within the same render.
+* The `cache` function helps optimize performance when a function is called multiple times in one route.
+* Understand that `cache` memorizes for a single render pass, and subsequent page navigations will re-fetch data.
+* Always revalidate the path (or revalidate cache) after a successful mutation with a server action to display updated data.
+* Implement a Data Access Layer (DAL) for a clean, scalable, and reusable way to fetch and authorize data, especially in growing applications.
+* Avoid fetching and authorizing data directly within components using simple async functions and `if` checks, as this can lead to reusability and authorization issues.
+* Use Server Components for data fetching with `fetch()` or database queries directly in components.
+
+## Database Queries
+
+* Optimize database queries and use connection pooling.
+
+## Project and File Structure
+
+* Avoid a single large `app` folder for all routes, a giant `components` folder for everything, and a single `actions` folder for all mutations.
+* Break files into separate components for reusability, especially for models used in multiple places.
+* Separate files into components if they become too large to manage.
+* Organize `utils` folder for utilities like configuration files or Zod schemas.
+* Store server actions in a dedicated `actions` file, but consider separation within it for better organization if it grows too large.
+* Follow the App Router convention with `page.tsx`, `layout.tsx`, `loading.tsx`, `error.tsx`, and `not-found.tsx` files.
+
+## Component Strategy (Server and Client Components)
+
+* Prioritize using React Server Components as much as possible for performance benefits (no JavaScript shipped to client, no hydration).
+* Use Server Components by default unless client-side interactivity is required.
+* Leverage React Server Components to reduce JavaScript bundle size and eliminate hydration on the client side, leading to faster page loads.
+* Create separate, smaller client components marked with `use client` only when interactivity (e.g., `useState` hook) is required.
+* Only use `"use client"` directive when necessary for interactivity, state, or browser APIs.
+* Separate interactive components into client components using `use client` directive, keeping main pages as server components for optimal performance.
+
+## Server Actions
+
+* Treat server actions as public HTTP endpoints and implement proper security assumptions and authorization checks.
+* Never use server actions solely for fetching data; they are primarily for mutating data.
+* Fetching data with server actions creates POST requests, which breaks Next.js caching and prevents parallel execution, leading to performance issues.
+* Avoid using `useState` for loading states when using server actions.
+* When fetching data in a layout, always fetch the data on the client side to preserve static rendering for child components. Fetching on the server side in a layout will dynamically render all children.
+
+## Error Handling
+
+* Avoid using `throw new Error` for error handling in production, as it may only work in development and not display proper error messages to users in production.
+* Return a structured object for error messages in production to provide meaningful feedback to the user (e.g., `toast.error` messages).
+* Use `error.tsx` files for error handling at route segments.
+
+## Route Handlers
+
+* Implement API routes in `app/api/` directory using `route.ts` files with proper HTTP methods.
+
+## Metadata API
+
+* Use the metadata API for dynamic SEO with `generateMetadata()` function.
+
+## Streaming
+
+* Implement streaming with Suspense boundaries for better UX.
+
+## Loading States
+
+* Implement `loading.tsx` files for loading states.
+
+## Parallel and Intercepting Routes
+
+* Use parallel routes when needed for complex layouts.
+* Use intercepting routes for modal-like experiences.
+
+## Middleware
+
+* Implement middleware for logging and request/response modification.
+
+## Static Generation
+
+* Use `generateStaticParams()` for static generation when possible.
+
+---

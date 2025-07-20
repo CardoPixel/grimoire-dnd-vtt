@@ -1,0 +1,23 @@
+---
+alwaysApply: true
+---
+
+# State Management
+
+## Server State
+
+Use Server Components for server state when possible.
+
+## Client State
+
+Use React hooks (useState, useReducer) for simple client state.
+
+## Global State
+
+Use Context API or Zustand for global state management.
+
+## Form State
+
+Use React Hook Form or similar libraries for form management.
+
+---

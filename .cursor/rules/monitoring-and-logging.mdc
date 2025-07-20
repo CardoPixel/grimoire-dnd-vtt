@@ -1,0 +1,23 @@
+---
+alwaysApply: true
+---
+
+# Monitoring and Logging
+
+## Error Tracking
+
+Implement error tracking with Sentry or similar.
+
+## Performance Monitoring
+
+Use Vercel Analytics or similar for performance monitoring.
+
+## Logging
+
+Implement structured logging for debugging and monitoring.
+
+## Health Checks
+
+Implement health check endpoints for monitoring.
+
+---

@@ -1,0 +1,13 @@
+---
+alwaysApply: true
+name: Command Excecution Policies
+---
+
+# Command Execution Policies
+
+Never try to run any commands directly.
+
+Instead, always tell the user what command to run and what to expect as the
+output of the command.
+
+---
