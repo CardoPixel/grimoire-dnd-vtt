@@ -9,6 +9,7 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from "@/components/ui/carousel";
+import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 import { useIsMobile } from "@/hooks/use-mobile";
 import * as React from "react";
 
@@ -23,7 +24,7 @@ export default function HomePage() {
 	const orientation = isMobile ? "vertical" : "horizontal";
 	const [api, setApi] = React.useState<CarouselApi>();
 	const [selected, setSelected] = React.useState(0);
-	const count = images.length;
+	// const count = images.length;
 
 	React.useEffect(() => {
 		if (!api) return;
@@ -41,6 +42,9 @@ export default function HomePage() {
 
 	return (
 		<main className="fixed inset-0 w-screen h-screen overflow-hidden bg-black">
+			<div className="absolute top-4 right-4 z-50">
+				<ThemeSwitcher />
+			</div>
 			<Carousel
 				setApi={setApi}
 				className="w-screen h-screen flex items-center justify-center relative"
@@ -60,28 +64,28 @@ export default function HomePage() {
 							<div className="absolute inset-0 z-20 pointer-events-none" />
 							<div className="flex flex-col items-center justify-center w-full h-full relative z-30">
 								<div className="rounded-xl px-8 py-12 w-full max-w-2xl mx-4 flex flex-col items-center justify-center">
-									<div className="border-2 bg-black/90 p-8 rounded-xl flex flex-col items-center justify-center shadow-2xl">
-										<h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-center tracking-tight drop-shadow-lg">
+									<div className="border-2 bg-background/90 p-8 rounded-xl flex flex-col items-center justify-center shadow-2xl">
+										<h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-center tracking-tight drop-shadow-lg text-primary">
 											G.R.I.M.O.I.R.E
 										</h1>
-										<h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center text-fuchsia-300">
+										<h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center text-foreground">
 											Unleash your imagination in D&D
 											adventures!
 										</h2>
 										{idx === 0 && (
-											<p className="text-center text-lg md:text-xl text-gray-200">
+											<p className="text-center text-lg md:text-xl">
 												AI-powered Game Master, campaign
 												dashboard, and immersive VTT.
 											</p>
 										)}
 										{idx === 1 && (
-											<p className="text-center text-lg md:text-xl text-gray-200">
+											<p className="text-center text-lg md:text-xl">
 												Upload your campaign resources
 												and let the magic begin.
 											</p>
 										)}
 										{idx === 2 && (
-											<p className="text-center text-lg md:text-xl text-gray-200">
+											<p className="text-center text-lg md:text-xl">
 												Collaborate, explore, and create
 												unforgettable stories.
 											</p>
@@ -143,7 +147,7 @@ export default function HomePage() {
 					className="absolute z-50 w-full flex justify-center"
 					style={{ bottom: 32 }}
 				>
-					<div className="bg-black/70 rounded-full px-4 py-2 flex flex-row gap-4 items-center">
+					<div className="bg-background/70 rounded-full px-4 py-2 flex flex-row gap-4 items-center">
 						{images.map((_, idx) => (
 							<Button
 								key={idx}
@@ -151,7 +155,7 @@ export default function HomePage() {
 								size="icon"
 								aria-label={`Go to slide ${idx + 1}`}
 								onClick={() => goTo(idx)}
-								className={`border-2 ${selected === idx ? "border-fuchsia-500 bg-fuchsia-500" : "border-white bg-white/80"} rounded-full p-0 flex items-center justify-center transition-colors duration-200`}
+								className={`border-2 ${selected === idx ? "border-primary bg-primary" : "border-secondary bg-secondary"} rounded-full p-0 flex items-center justify-center transition-colors duration-200`}
 								style={{
 									width: 22,
 									height: 22,
@@ -160,7 +164,7 @@ export default function HomePage() {
 								}}
 							>
 								<span
-									className={`block w-4 h-4 rounded-full ${selected === idx ? "bg-white" : "bg-transparent"}`}
+									className={`block w-4 h-4 rounded-full ${selected === idx ? "bg-primary" : "bg-secondary"}`}
 								/>
 							</Button>
 						))}

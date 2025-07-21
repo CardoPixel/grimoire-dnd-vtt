@@ -1,26 +1,26 @@
 {
-  "printWidth": 80,
-  "tabWidth": 4,
-  "useTabs": true,
-  "trailingComma": "all",
-  "singleQuote": false,
-  "semi": true,
-  "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-imports"],
-  "importOrder": [
-    "^@core/(.*)$",
-    "",
-    "^@server/(.*)$",
-    "^@ui/(.*)$",
-    "",
-    "^[./]"
-  ],
-  "overrides": [
-    {
-      "files": "*.md",
-      "options": {
-        "tabWidth": 2,
-        "useTabs": false
-      }
-    }
-  ]
+	"printWidth": 80,
+	"tabWidth": 4,
+	"useTabs": true,
+	"trailingComma": "all",
+	"singleQuote": false,
+	"semi": true,
+	"plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-imports"],
+	"importOrder": [
+		"^@core/(.*)$",
+		"",
+		"^@server/(.*)$",
+		"^@ui/(.*)$",
+		"",
+		"^[./]"
+	],
+	"overrides": [
+		{
+			"files": "*.md",
+			"options": {
+				"tabWidth": 2,
+				"useTabs": false
+			}
+		}
+	]
 }

@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import { ThemeProvider } from "next-themes";
+import dynamic from "next/dynamic";
 import * as React from "react";
 
 export const metadata = {
@@ -13,6 +14,11 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
+	const ThemeSwitcher = dynamic(() =>
+		import("@/components/ui/theme-switcher").then(
+			(mod) => mod.ThemeSwitcher,
+		),
+	);
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body>
@@ -23,6 +29,9 @@ export default function RootLayout({
 					disableTransitionOnChange
 					enableColorScheme
 				>
+					<div className="absolute top-4 right-4 z-50">
+						<ThemeSwitcher />
+					</div>
 					{children}
 				</ThemeProvider>
 			</body>
