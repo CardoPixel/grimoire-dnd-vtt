@@ -42,7 +42,7 @@ export function LocaleSwitcher() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant="outline" size="icon" aria-label={t("change")}>
+				<Button variant="default" size="icon" aria-label={t("change")}>
 					{availableLanguages.find((l) => l.locale === currentLocale)
 						?.flagEmoji || "🌐"}
 					{/* {isSupportedLocale(currentLocale)
@@ -70,12 +70,7 @@ export function LocaleSwitcher() {
 					>
 						<span
 							role="img"
-							aria-label={t(
-								(lang.locale + "_alt") as
-									| "en_alt"
-									| "es_alt"
-									| "pt_alt",
-							)}
+							aria-label={lang.alt}
 							className="text-xl mr-2"
 						>
 							{lang.flagEmoji}

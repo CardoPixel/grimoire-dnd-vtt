@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 export default function Error({ reset }: { reset: () => void }) {
 	const t = useTranslations("error");
 	return (
-		<div className="fixed inset-0 flex flex-col items-center justify-center bg-background/80 z-50 p-4">
+		<div className="inset-0 flex flex-col items-center justify-center bg-background/80 z-50 p-4">
 			<h1 className="text-2xl font-bold mb-2 text-destructive">
 				{t("title")}
 			</h1>

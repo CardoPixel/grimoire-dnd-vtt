@@ -25,9 +25,12 @@ declare const messages: {
 		"en": "Inglés",
 		"en_alt": "Inglés de EE.UU.",
 		"es": "Español",
-		"es_alt": "Español de España",
-		"pt": "Portugués",
-		"pt_alt": "Portugués Brasileño"
+		"es_alt": "Español de España"
+	},
+	"manifest": {
+		"name": "G.R.I.M.O.I.R.E",
+		"short_name": "GRIMOIRE",
+		"description": "Proyecto web de Game Master de Dungeons & Dragons"
 	}
 };
 export default messages;

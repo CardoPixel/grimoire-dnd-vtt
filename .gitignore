@@ -24,3 +24,4 @@ npm-debug.log*
 *.tmp
 *.swp
 certificates
+messages/*.d.json.ts

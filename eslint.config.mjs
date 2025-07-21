@@ -36,6 +36,13 @@ const eslintConfig = [
 			],
 		},
 	},
+	{
+		files: ["app/**/og-image/route.tsx"],
+		rules: {
+			"@next/next/no-img-element": "off",
+		},
+	},
+	eslintConfigPrettier,
 ];
 
-export default [...eslintConfig, eslintConfigPrettier];
+export default eslintConfig;

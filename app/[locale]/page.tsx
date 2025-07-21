@@ -5,7 +5,6 @@ import * as React from "react";
 import { useTranslations } from "next-intl";
 
 import { FullScreenCarousel } from "@/components/custom/carousel/full-screen-carousel";
-import { ThemeSwitcher } from "@/components/settings/theme-switcher";
 
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -20,13 +19,10 @@ export default function HomePage() {
 	];
 
 	return (
-		<main className="fixed inset-0 w-screen h-screen overflow-hidden bg-black">
-			<div className="absolute top-4 right-4 z-50">
-				<ThemeSwitcher />
-			</div>
+		<main className="w-full h-screen overflow-hidden">
 			<FullScreenCarousel images={images} orientation={orientation}>
 				{(idx) => (
-					<div className="rounded-xl px-8 py-12 w-full max-w-2xl mx-4 flex flex-col items-center justify-center">
+					<div className="rounded-xl w-full mx-auto flex flex-col items-center justify-center">
 						<div className="border-2 bg-background/90 p-8 rounded-xl flex flex-col items-center justify-center shadow-2xl">
 							<h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-center tracking-tight drop-shadow-lg text-primary">
 								{t("title")}

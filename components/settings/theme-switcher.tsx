@@ -27,7 +27,7 @@ export function ThemeSwitcher() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant="outline" size="icon" aria-label={t("toggle")}>
+				<Button variant="default" size="icon" aria-label={t("toggle")}>
 					{mounted ? (
 						resolvedTheme === "dark" ? (
 							<Moon className="w-5 h-5" />

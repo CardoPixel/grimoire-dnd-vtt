@@ -2,7 +2,14 @@ import type { NextConfig } from "next";
 
 import createNextIntlPlugin from "next-intl/plugin";
 
+const baseUrl = process.env.VERCEL_URL
+	? `https://${process.env.VERCEL_URL}`
+	: `http://localhost:${process.env.PORT || 3000}`;
+
 const nextConfig: NextConfig = {
+	env: {
+		BASE_URL: baseUrl,
+	},
 	images: {
 		domains: ["pexels.com"],
 	},

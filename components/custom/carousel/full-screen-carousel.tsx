@@ -43,9 +43,7 @@ export function FullScreenCarousel({
 	};
 
 	return (
-		<div
-			className={`fixed inset-0 w-screen h-screen overflow-hidden bg-black ${className}`}
-		>
+		<div className={`fixed w-screen h-screen overflow-hidden ${className}`}>
 			<Carousel
 				setApi={setApi}
 				className="w-screen h-screen flex items-center justify-center relative"
