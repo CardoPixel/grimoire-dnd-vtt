@@ -1,5 +1,8 @@
 import "@/styles/globals.css";
 
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import * as React from "react";
 
 import type { Metadata, Viewport } from "next";
@@ -111,6 +114,8 @@ export default async function LocaleLayout({
 						{children}
 					</ThemeProvider>
 				</NextIntlClientProvider>
+				<SpeedInsights />
+				<Analytics />
 			</body>
 		</html>
 	);
