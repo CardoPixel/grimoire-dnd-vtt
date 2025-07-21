@@ -1,11 +1,16 @@
 "use client";
 
-import { FullScreenCarousel } from "@/components/custom/carousel/full-screen-carousel";
-import { ThemeSwitcher } from "@/components/ui/theme-switcher";
-import { useIsMobile } from "@/hooks/use-mobile";
 import * as React from "react";
 
+import { useTranslations } from "next-intl";
+
+import { FullScreenCarousel } from "@/components/custom/carousel/full-screen-carousel";
+import { ThemeSwitcher } from "@/components/settings/theme-switcher";
+
+import { useIsMobile } from "@/hooks/use-mobile";
+
 export default function HomePage() {
+	const t = useTranslations("home");
 	const isMobile = useIsMobile();
 	const orientation = isMobile ? "vertical" : "horizontal";
 	const images = [
@@ -24,27 +29,24 @@ export default function HomePage() {
 					<div className="rounded-xl px-8 py-12 w-full max-w-2xl mx-4 flex flex-col items-center justify-center">
 						<div className="border-2 bg-background/90 p-8 rounded-xl flex flex-col items-center justify-center shadow-2xl">
 							<h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-center tracking-tight drop-shadow-lg text-primary">
-								G.R.I.M.O.I.R.E
+								{t("title")}
 							</h1>
 							<h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center text-foreground">
-								Unleash your imagination in D&D adventures!
+								{t("subtitle")}
 							</h2>
 							{idx === 0 && (
 								<p className="text-center text-lg md:text-xl">
-									AI-powered Game Master, campaign dashboard,
-									and immersive VTT.
+									{t("slide0")}
 								</p>
 							)}
 							{idx === 1 && (
 								<p className="text-center text-lg md:text-xl">
-									Upload your campaign resources and let the
-									magic begin.
+									{t("slide1")}
 								</p>
 							)}
 							{idx === 2 && (
 								<p className="text-center text-lg md:text-xl">
-									Collaborate, explore, and create
-									unforgettable stories.
+									{t("slide2")}
 								</p>
 							)}
 						</div>

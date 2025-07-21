@@ -1,5 +1,7 @@
 "use client";
 
+import * as React from "react";
+
 import { Button } from "@/components/ui/button";
 import {
 	Carousel,
@@ -9,7 +11,6 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from "@/components/ui/carousel";
-import * as React from "react";
 
 export interface FullScreenCarouselProps {
 	images: string[];

@@ -1,0 +1,29 @@
+{
+	"home": {
+		"title": "G.R.I.M.O.I.R.E",
+		"subtitle": "Unleash your imagination in D&D adventures!",
+		"slide0": "AI-powered Game Master, campaign dashboard, and immersive VTT.",
+		"slide1": "Upload your campaign resources and let the magic begin.",
+		"slide2": "Collaborate, explore, and create unforgettable stories."
+	},
+	"error": {
+		"title": "Something went wrong",
+		"description": "An unexpected error occurred. Please try again.",
+		"retry": "Retry"
+	},
+	"theme": {
+		"light": "Light",
+		"dark": "Dark",
+		"system": "System",
+		"toggle": "Toggle theme"
+	},
+	"locale": {
+		"change": "Change language",
+		"en": "English",
+		"en_alt": "US English",
+		"es": "Español",
+		"es_alt": "Español de España",
+		"pt": "Portuguese",
+		"pt_alt": "Portuguese Brasileiro"
+	}
+}

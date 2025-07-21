@@ -7,15 +7,6 @@
 
 @layer theme, base, components, utilites;
 
-html,
-body {
-	min-height: 100%;
-	font-family:
-		"Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "sans-serif";
-	margin: 0;
-	padding: 0;
-}
-
 @theme inline {
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);

@@ -7,12 +7,22 @@
 	"semi": true,
 	"plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-imports"],
 	"importOrder": [
-		"^@core/(.*)$",
+		"^.+\\.css$",
 		"",
-		"^@server/(.*)$",
-		"^@ui/(.*)$",
+		"^react$",
+		"^react/(.*)$",
 		"",
-		"^[./]"
+		"^next$",
+		"^next/(.*)$",
+		"",
+		"^next-[a-zA-Z0-9_-]+$",
+		"^next-[a-zA-Z0-9_-]+/(.*)$",
+		"",
+		"^@/components/ui/(.*)$",
+		"",
+		"^@/(?!hooks)(.*)$",
+		"",
+		"^@/hooks/(.*)$"
 	],
 	"overrides": [
 		{

@@ -1,5 +1,20 @@
 {
+	// General Editor Setting
+	"editor.guides.bracketPairs": true,
+	"editor.accessibilitySupport": "off",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"window.commandCenter": true,
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"css.lint.unknownAtRules": "ignore"
+	"css.lint.unknownAtRules": "ignore",
+	// Typescript
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+	"typescript.inlayHints.parameterNames.enabled": "all",
+	// Extensions
+	"extensions.ignoreRecommendations": false,
+	// i18n-ally
+	"i18n-ally.enabledFrameworks": ["next-intl"],
+	"i18n-ally.localesPaths": ["messages"],
+	"i18n-ally.keystyle": "nested"
 }
